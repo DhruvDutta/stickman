@@ -1,0 +1,156 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.Sm{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: bisque;
+    border-bottom: 1em solid rgb(32, 190, 32);
+    height: 20em;
+    width: 20em;
+}
+.stickman{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    animation: walkrise 1.5s .325s infinite;
+
+}
+.head,.body,.arm1,.arm2,.leg1,.leg2,.lg1,.lg2,.lowerleg1,.lowerleg2{
+    position:absolute;
+    background-color: black;
+}
+.head{
+    top:2.5%;
+    left:42.5%;
+    height: 15%;
+    width: 15%;
+    border-radius: 50%;
+}
+.body{
+    top:20%;
+    left:44%;
+    height:44%;
+    width: 12%;
+    border-radius: 1em;
+}
+.arm1,.arm2{
+    height: 35%;
+    width: 6%;
+    border-radius: 1em;
+    top: 27%;
+    left: 47%;
+    transform-origin: top center;
+}
+.arm1{
+    
+    animation: arm 3s infinite ease-in-out;
+}
+.arm2{
+    animation: arm 3s 1.5s infinite ease-in-out;
+}
+.lowerleg1,.lowerleg2{
+    top: 61%;
+    left: 46.5%;
+    height: 22%;
+    width: 7%;
+    border-radius: 1em;
+    transform-origin: top center;
+    background-color: transparent;
+}
+.lg1,.lg2{
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    background-color: black;
+}
+.leg1,.leg2{
+    height: 22%;
+    width: 7%;
+    border-radius: 1em;
+    top: 61%;
+    left: 46.5%;
+    transform-origin: top center;
+}
+.lowerleg1,.lowerleg2{
+    top: 83%;
+    transform-origin: center -100%;
+}
+.lg1,.lg2{
+    transform-origin: top center;
+    transform: rotate(-50deg);
+}
+.lg1{
+    animation: lowerleg 3s 1.5s infinite ease-in-out;
+}
+.lg2{
+    animation: lowerleg 3s infinite ease-in-out;
+}
+.leg1,.lowerleg1{
+    animation: leg 3s 1.5s infinite ease-in-out;
+}
+.leg2,.lowerleg2{
+    animation: leg 3s infinite ease-in-out;
+}
+@keyframes arm{
+    0%{
+        left: 50%;
+        transform: rotate(-60deg) translateY(-.5em);
+    }
+    50%{
+        left: 44%;
+
+        transform: rotate(60deg) translateY(-.5em);
+    }
+    100%{
+        left: 50%;
+
+        transform: rotate(-60deg) translateY(-.5em);
+    }
+}
+@keyframes leg{
+    0%{
+        left: 50%;
+        transform: rotate(-40deg) translateY(-.5em);
+    }
+    50%{
+        left: 44%;
+
+        transform: rotate(20deg) translateY(-.5em);
+    }
+    100%{
+        left: 50%;
+
+        transform: rotate(-40deg) translateY(-.5em);
+    }
+}
+@keyframes lowerleg{
+    0%{
+        transform: rotate(10deg) translateY(-.5em);
+    }
+    40%{
+        transform: rotate(0deg) translateY(-.5em);
+    }
+    75%{
+        transform: rotate(60deg) translateY(-.5em);
+    }
+
+    100%{
+
+        transform: rotate(10deg) translateY(-.5em);
+    }
+}
+@keyframes walkrise{
+    0%{
+        transform: translateY(5%);
+    }
+    60%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5%);
+    }
+}
